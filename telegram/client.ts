@@ -8,8 +8,8 @@ export const initTelegram = () => {
 
     const token = process.env.TELEGRAM_TOKEN;
 
-    if(token === undefined) return
-
+    if(!token) return
+    
     const bot = new TelegramBot(token, {polling: true});
 
     return bot
